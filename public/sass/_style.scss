@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.no_padding{
+  padding: 0 !important;
+}
+#app{
+  overflow: hidden;
+}
+.topmenu{
+  padding-top: 20px;
+  background: #95942b;
+  border-bottom:3px solid #b4ba1f;
+  height: 145px;
+  position: relative;
+  @include box-shadow(0 0 29px 4px);
+  #nameOfSite {
+    color: #fff;
+    font-size: 2em;
+    font-family: cursive;
+  }
+
+  #logo {
+  max-width: 100%;
+  height: 229px;
+  top: -9px;
+  position: absolute;
+  }
+  .cont {
+    color: #fff;
+    font-size: 100%;
+    letter-spacing: 1px;
+    font-family: cursive;
+    text-align: center;
+    font-weight: bold;
+    ul li {
+      list-style: none;
+      display: inline-block;
+    }
+  }
+
+}
+.topmenu_under{
+  background: rgba(232, 232, 217, 0.47);
+  border-top: 5px solid #757b36;
+  margin-top: 4px;
+  border-bottom: 5px solid #757b36;
+
+  .top_menu_left, .top_menu_right{
+    text-align: center;
+    padding-top: 40px;
+    font-size: 120%;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding-left: 0px;
+    padding-right: 0;
+
+     a{
+      color: #95942b;
+      text-decoration: none;
+      display: inline-block;
+      margin: 10px;
+      position: relative;
+
+    &:before{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      top: -73%;
+      margin-left: -31px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      @include transition(all 0.5s ease-in);   
+    }
+
+    }
+
+
+  }
+  .top_menu_right{
+    float: right;
+     a:nth-child(1){
+      &:before{
+        content:' ';
+        background-image: url('/img/icons/call.png');    
+      }
+      
+      &:hover:before{
+        content:'';
+        background-image: url('/img/icons/call_hover.png');      
+      }          
+    }
+        a:nth-child(2){
+      &:before{
+        content:' ';
+        background-image: url('/img/icons/find.png');  
+      }
+      
+      &:hover:before{
+        content:'';
+        background-image: url('/img/icons/find_hover.png');      
+      }          
+    }
+  }
+    .top_menu_left{
+      float: left;
+
+    a:nth-child(1){
+      &:before{
+        content:' ';
+        background-image: url('/img/icons/poslugy.png');    
+      }
+      
+      &:hover:before{
+        content:'';
+        background-image: url('/img/icons/poslugy_hover.png');      
+      }          
+    }
+        a:nth-child(2){
+      &:before{
+        content:' ';
+        background-image: url('/img/icons/food.png');  
+      }
+      
+      &:hover:before{
+        content:'';
+        background-image: url('/img/icons/food_hover.png');      
+      }          
+    }
+  }
+}
+
