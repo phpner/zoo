@@ -2,6 +2,10 @@
   padding: 0;
   margin: 0;
 }
+body{
+  font-size: 16px;
+  letter-spacing: 1.1px
+}
 .no_padding{
   padding: 0 !important;
 }
@@ -132,3 +136,66 @@
   }
 }
 
+footer{
+    background: rgba(149, 148, 43, 0.6);
+    border-top: 2px solid rgba(149, 148, 43, 1);
+    text-align: center;
+    padding: 20px 0 0 0;
+    color: #fff;
+    font-size: 120%;
+    letter-spacing: 1.5px;
+    ul{
+      margin:0;
+      li{
+        display: inline-block;
+
+      }
+    }
+    span{
+      color: #000;
+      border-top:1px dotted #000;
+      width: 50%;
+      display: inline-block;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+}
+#myTab{
+  list-style: none;
+  text-align: center;
+  @include border-radius(15px);
+  li {
+    display: inline-block;
+  a{
+    color: #fff;
+     display: block;
+     background: #95942b;
+     width: 100%;
+     margin-top: 2px;
+     font-size: 130%;
+     font-family: sans-serif;
+     padding: 3px 30px;
+     border: 2px solid #b5bb1f;
+  }
+}
+  }
+  .tab-content{
+    float: left;
+  }
+  .logo_uslugi{
+    border-bottom: 2px dotted #95942b;
+    margin: 15px 0 15px 0;
+    padding-bottom: 15px;
+   
+  }
+  .tab-content{
+    margin-bottom: 15px;
+    img{
+      float: right;
+      height: 350px;
+      width: 35%;
+      margin-top: -60px;
+      border: 2px solid #95942b;
+      @include border-radius(16px);
+    }
+  }

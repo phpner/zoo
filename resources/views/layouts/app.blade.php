@@ -24,12 +24,30 @@
     <script src="/js/jquery.min.js"></script>
     <script src="/js/slick.min.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/jquery.magnific-popup.min.js"></script>
 
 </head>
 <body>
 <div id="app">
     @include('layouts.header')
-    @yield('content')
+    @yield('slider')
+      {{--sidebar--}}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-9 col-xs-9">
+                @yield('content')
+            </div>
+            <div class="col-md-3 col-xs-3">
+                <div class="col-md-12">
+                @yield('sidebar_bottom')
+                   @include('layouts.sidebar')
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @include('layouts.footer')
 </div>
 
 <!-- Scripts -->

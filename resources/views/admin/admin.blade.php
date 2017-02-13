@@ -11,9 +11,14 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
+    <link href="/vendor/jasekz/laradrop/css/styles.css" rel="stylesheet" type="text/css">
     <link href="/css/app.css" rel="stylesheet">
 
     <!-- Scripts -->
+    <script defer src="/js/jquery.min.js"></script>
+    <script defer src="/vendor/jasekz/laradrop/js/enyo.dropzone.js"></script>
+    <script defer src="/vendor/jasekz/laradrop/js/laradrop.js"></script>
+    <script defer src="/js/tinymce/tinymce.min.js"></script>
     <script>
         window.Laravel = {!! json_encode([
             'csrfToken' => csrf_token(),
@@ -82,9 +87,11 @@
     </nav>
 
     @yield('content')
-</div>
+
 
 <!-- Scripts -->
 <script src="/js/app.js"></script>
+
+@yield('script')
 </body>
 </html>

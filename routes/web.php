@@ -27,26 +27,10 @@ Route::group(['prefix' => 'admin'], function () {
 
 });
 
+// Услуги
+Route::get('/uslugi',['uses'=> 'UslugiController@index', 'as'=> 'uslugi']);
+//Корма
+Route::get('/korma',['uses' => 'KormaController@index', 'as' => 'korma']);
 
-Route::get('page/{id}',function($id){
 
-    $id = (int) $id;
-
-    $data = Page::where('id', '=', $id)->firstOrFail();
-
-    return view('pages',['page' =>  $data]);
-
-});
-        //booK
-
-Route::group(['prefix'=>'book'],function (){
-
-    Route::get('{id}',['uses' => 'Book\BookController@getSingl']);
-});
-
-Route::get('book',function(){
-    $n = Book::all();
-
-    return view('book',['link' =>  $n ]);
-});
 

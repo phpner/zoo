@@ -2,7 +2,7 @@
         <div class="top_header">
                 <div class="row topmenu">
                     <div class="col-md-4 col-xs-4 text-center">
-                        <p id="nameOfSite">Назва сайту</p>
+                        <p id="nameOfSite"><a href="/">Назва сайту</a></p>
                     </div>
                     <div class="col-md-3  col-xs-4">
 
@@ -21,11 +21,11 @@
             </div>
         <div class="row topmenu_under">
         <div class="top_menu_left col-md-6">
-            <a href="#">
+            <a href="{{route('uslugi')}}">
                 <br>
                 Ветеринарні послуги
             </a>
-            <a href="#">
+            <a href="{{route('korma')}}">
                 <br>
                 Корми
             </a>
@@ -35,11 +35,7 @@
                 <a href="$"> <br> як нас знайти</a>
             </div>
         </div>
-        <div class="container sliderHeader">
-            <img src="/img/sliderheader/1.jpg" alt="">
-            <img src="/img/sliderheader/2.jpg" alt="">
-            <img src="/img/sliderheader/3.jpg" alt="">
-        </div>
+
         </div>
 
 
