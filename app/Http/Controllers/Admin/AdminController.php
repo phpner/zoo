@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\model\Korm;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
@@ -35,21 +36,18 @@ class AdminController extends BaseController
     public function put_page(Request $post){
 
         if ($post->input('title')){
-            $title = $post->input('title');
-            $descrip =  $post->input('descrip');
 
-            $file = $post->file('photo');
-
-            dd($file->getClientOriginalName());
+            dd($post);
             die();
 
-            $Page = new Page();
+            $korm = new Korm();
 
-            $Page->title = $title;
-            $Page->descrip = $descrip;
+            $korm->title = $post['title'];
+            $korm->description =  $post['textarea'];
+            $korm->img_id = serialize($post['files']);
 
 
-            if ($Page->save()){
+            if ($korm->save()){
                 return redirect ()->route('admin');
 
             }

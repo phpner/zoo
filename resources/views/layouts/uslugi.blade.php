@@ -14,7 +14,7 @@
             <li><a href="#settings" data-toggle="tab">Стоматологія</a></li>
         </ul>
 
-    <div class="tab-content">
+    <div class="tab-content tabUslugi">
         <div class="tab-pane active" id="home">
             <h2>Терапія</h2>
             <a class="img_popup" href="/img/tatapiya.jpg"> <img src="/img/tatapiya.jpg" alt=""></a>

@@ -188,14 +188,17 @@ footer{
     padding-bottom: 15px;
    
   }
-  .tab-content{
+  .tabUslugi{
     margin-bottom: 15px;
     img{
       float: right;
-      height: 350px;
+      height: 280px;
       width: 35%;
       margin-top: -60px;
       border: 2px solid #95942b;
       @include border-radius(16px);
     }
   }
+.modal-dialog{
+  width: 90% !important
+}

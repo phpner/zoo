@@ -13,6 +13,7 @@
     <!-- Styles -->
     <link href="/vendor/jasekz/laradrop/css/styles.css" rel="stylesheet" type="text/css">
     <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/admin.css" rel="stylesheet">
 
     <!-- Scripts -->
     <script defer src="/js/jquery.min.js"></script>
@@ -45,7 +46,7 @@
                 </a>
             </div>
             <ul class="nav  navbar-nav">
-                <li><a href="{{URL::route('put_pgae')}}">Добавить страницу</a></li>
+                <li><a href="{{URL::route('put_pgae')}}">Добавить корм</a></li>
             </ul>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
