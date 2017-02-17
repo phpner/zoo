@@ -4,6 +4,10 @@
 }
 .imgIn{
 	position: relative;
+	width: 0%;
+	left: -80px;
+	right: 0;
+	margin: 0 auto;
 }
 .imgIn .delImg{
 	position: absolute;

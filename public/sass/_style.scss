@@ -9,6 +9,12 @@ body{
 .no_padding{
   padding: 0 !important;
 }
+.no-margin{
+  margin-left: 0!important;
+  margin-right: 0!important;
+  margin-top: 0!important;
+  margin-bottom: 0!important;
+}
 #app{
   overflow: hidden;
 }
@@ -20,9 +26,12 @@ body{
   position: relative;
   @include box-shadow(0 0 29px 4px);
   #nameOfSite {
-    color: #fff;
+    
     font-size: 2em;
     font-family: cursive;
+    a{
+      color: #fff;
+    }
   }
 
   #logo {
@@ -179,8 +188,37 @@ footer{
   }
 }
   }
+  #kormTab{
+  list-style: none;
+  text-align: center;
+  @include border-radius(15px);
+  .active{
+    a{
+        border-bottom: 4px solid#95942b;
+       @include box-shadow(inset 0px 0px 9px 1px #95942b); 
+        padding: 6px 28px;
+    }
+  }
+  li {
+    display: inline-block;
+  a{
+  color: #fff;
+  display: block;
+  width: 100%;
+  margin-top: 2px;
+  font-size: 130%;
+  font-family: sans-serif;
+  padding: 3px 30px;
+  border-bottom: 4px solid #70942b;
+  }
+}
+  }
   .tab-content{
-    float: left;
+   margin-bottom: 30px;
+  
+    .tab-pane{
+     transition: opacity 1.15s linear !important
+    }
   }
   .logo_uslugi{
     border-bottom: 2px dotted #95942b;
@@ -201,4 +239,30 @@ footer{
   }
 .modal-dialog{
   width: 90% !important
+}
+.kormitems{
+      transition: all .8s;
+      z-index: 1;
+      height: 322px;
+      overflow: hidden;
+      padding: 10px;
+      border: 2px solid #dbdbdb;
+      .img_popup img{
+        min-width: 100%;
+        height: 165px;
+      }
+      @include border-radius(5px);
+      h3{
+        text-align: center;
+      }
+      &:hover{
+         @include box-shadow(0px 0px 14px 0px #2774ce);
+         z-index: 10;
+        
+      }
+}
+.find{
+  img{
+    width: 100%;
+  }
 }

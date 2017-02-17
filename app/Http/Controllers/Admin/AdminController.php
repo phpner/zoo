@@ -37,14 +37,12 @@ class AdminController extends BaseController
 
         if ($post->input('title')){
 
-            dd($post);
-            die();
-
             $korm = new Korm();
 
             $korm->title = $post['title'];
             $korm->description =  $post['textarea'];
-            $korm->img_id = serialize($post['files']);
+            $korm->img_link = $post['file'];
+            $korm->category_id = $post['category'];
 
 
             if ($korm->save()){

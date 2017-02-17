@@ -31,6 +31,7 @@ Route::group(['prefix' => 'admin'], function () {
 Route::get('/uslugi',['uses'=> 'UslugiController@index', 'as'=> 'uslugi']);
 //Корма
 Route::get('/korma',['uses' => 'KormaController@index', 'as' => 'korma']);
+Route::get('/find',['uses' => 'FindController@index', 'as' => 'find']);
 
 
 

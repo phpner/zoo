@@ -6,10 +6,10 @@
         {{ csrf_field() }}
         <div class="form-group text-center">
 
-            <label for="title" class=" col-md-12 text-center ">Название статьи</label><br>
+            <label for="title" class=" col-md-12 text-center ">Название корма</label><br>
             <div class="col-md-6 col-md-offset-3">
 
-                <input id="title" type="text" class="form-control" name="title" value="{{ old('title') }}" required
+                <input id="title" type="text" class="form-control" name="title" value="{{ old('title') }}"
                        autofocus>
 
             </div>
@@ -22,33 +22,39 @@
             </textarea>
         </div>
         <div class="col-md-12 text-center">
-            <h2>Допавить в раздел:</h2>
-            <label class="checkbox-inline">
-                <input type="checkbox"  name="ChY" value="1" required> Собаки
+
+            <fieldset>
+                <legend><h2>Допавить в раздел:</h2></legend>
+            <label for="category" class="checkbox-inline">
+                <input id="cat" type="radio"  name="category" value="2" required="" aria-required="true" aria-invalid="true"> Кошки
             </label>
-            <label class="checkbox-inline">
-                <input type="checkbox" i name="ChN" value="2"> Кошки
+            <label for="category" class="checkbox-inline">
+                <input id="dog" type="radio" name="category" value="1" > Собаки
             </label>
+
+                <br>
+                <label for="category" class="alert-danger"></label>
+            </fieldset>
+
 
             <hr>
-        <div class="col-md-12 text-center">
-            <hr>
-            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-               Добавить картинку
-            </button>
-        </div>
+            <div class="addImg container text-center"></div>
 
-    <div class="addImg container text-center"></div>
-        <hr>
-
-        <div class="form-group">
             <div class="col-md-12 text-center">
-                <button  type="submit" class="btn btn-success">
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                    Добавить картинку /редактировать
+                </button>
+            </div>
+            <br>
+            <hr>
+            <div class="col-md-12 text-center">
+                <button type="submit" class="btn btn-success">
                     Сохранить
                 </button>
 
             </div>
-        </div>
+
+            <div class="addfile"></div>
     </form>
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
@@ -72,34 +78,53 @@
 @endsection
 
 @section('script')
+
     <script>
         $(document).ready(function () {
+            $(".form").validate({
+                rules: {
+                title: {
+                    required: true
+                },
+                    category:{
+                        required: true
+                    }
+            },
+            messages:{
+                title: {
+                    required: 'Название корма объязателно!'
+                },
+                category:{
+                    required: "Выберите категорию!"
+                }
+            },
+                errorClass:'alert-danger',
+
+            });
 
             $('.laradrop').laradrop({
 
                 onInsertCallback: function (src) {
 
-
-                    var ser = JSON.stringify(src);
-
-                    if($('.addImg img').is('#'+ src.id )){
+                    if ($('.addImg img').is('#' + src.id)) {
                         alert('Такая картинка уже добавлена!');
-                    }else{
-                        $('.addImg').append('<div class="col-md-2 thumbnail imgIn"> <span class="glyphicon glyphicon-remove-sign delImg"></span> <img  id='+ src.id +'  class="added" src=' + src.src + '></div>');
+                    } else {
+                        $('.addImg').html('<div class="imgIn "> <span class="glyphicon glyphicon-remove-sign delImg"></span> <img  id=' + src.id + '  class="added thumbnail" src=' + src.src + '></div>');
 
-                        var img = src.src.slice(src.src.indexOf('b_') + 2 );
+                        var img = src.src.slice(src.src.indexOf('b_') + 2);
 
-                        $('form').append('<input type="text" name="files[]" value=' + img+ '>');
+                        $('.form .addfile').html('<input type="hidden" name="file" value=' + img + '>');
+                        $('#myModal').modal('toggle');
                     }
 
 
-                    $('.delImg').on('click', function(){
+                    $('.delImg').on('click', function () {
 
-                        $(this).parent ('div').remove();
+                        $(this).parent('div').remove();
 
                         var id = $(this).siblings('img').attr('id');
 
-                        console.log($('input[value=' + id + ']' ).remove());
+                        console.log($('.form').find("+ src.id +"));
                     });
 
                 },

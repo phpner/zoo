@@ -32,7 +32,7 @@
         </div>
             <div class="top_menu_right col-md-6">
                 <a href="#"> <br> Виклик лікаря додому </a>
-                <a href="$"> <br> як нас знайти</a>
+                <a href="{{route('find')}}"> <br> як нас знайти</a>
             </div>
         </div>
 
