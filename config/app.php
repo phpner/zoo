@@ -163,6 +163,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         'Jasekz\Laradrop\LaradropServiceProvider',
+        \App\Providers\WidgetProvider::class,
 
         /*
          * Package Service Providers...

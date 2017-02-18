@@ -1,17 +1,27 @@
 @extends('layouts.app')
 @section('slider')
     <div class="container">
-        <div class="row">
 
-        <div class="container sliderHeader">
-            <img src="/img/sliderheader/1.jpg" alt="">
-            <img src="/img/sliderheader/2.jpg" alt="">
-            <img src="/img/sliderheader/3.jpg" alt="">
-        </div>
-        </div>
     </div>
     @endsection
 
 @section('content')
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi doloremque doloribus, ea eaque ipsa itaque magnam minima nam nobis odit rem repellendus repudiandae, vitae. Accusamus aliquid aperiam asperiores aspernatur, dolore dolores error esse, facilis labore, magni nihil qui reiciendis rem? Laboriosam mollitia provident quisquam reiciendis! Animi asperiores consectetur cumque eius eos expedita in iste itaque iure laboriosam, maxime minus nobis non officia quos ratione, reprehenderit sed sint ullam vel? Atque beatae distinctio dolorem ipsa non optio porro possimus quia sed tenetur! Dicta earum, vitae! A accusamus aut commodi, consequatur delectus iste modi perspiciatis porro quos ratione reprehenderit temporibus veritatis vero? Accusantium architecto debitis eum, fuga harum in maiores molestiae necessitatibus nemo officia optio perferendis quasi quidem sed voluptate! Ab at cum esse impedit porro voluptatibus! Amet beatae dolore dolorem ducimus expedita natus quia, rem reprehenderit? Amet animi, asperiores commodi consequatur consequuntur cupiditate doloremque dolores ea eveniet exercitationem iste iure minima nesciunt odio optio quia recusandae suscipit velit veniam voluptas? Accusamus alias, aut consectetur culpa dolorem dolores doloribus dolorum enim est numquam optio praesentium quam quas, quasi quibusdam rerum temporibus. Aliquam est ex odio. Deserunt distinctio eaque eligendi hic nostrum optio possimus quia temporibus vitae voluptatum. Corporis ducimus fugit libero possimus.
+    <div class="row">
+
+        <div class="sliderHeader">
+            <img src="/img/sliderheader/1.jpg" alt="">
+            <img src="/img/sliderheader/2.jpg" alt="">
+            <img src="/img/sliderheader/3.jpg" alt="">
+        </div>
+    </div>
+    <h2 class="text-center">Ласкаво просимо</h2>
+<p>Цілодобова ветеринарна допомога кваліфікованих співробітників клініки "Друг" дозволить вам абсолютно не турбуватися за здоров'я свого вихованця, а йому - завжди бути в хорошому грайливому настрої. Ми надаємо самий повний спектр послуг для тварин, птахів і навіть рідкісних рептилій. Фахівці центру ветеринарної медицини повністю забезпечені сучасним обладнанням і ефективними препаратами.</p>
+
+<p>Послуги швидкої ветеринарної допомоги на Троешіне, і Позняках, включають виїзд лікаря додому з подальшим транспортуванням улюбленця на спеціально обладнаному авто в наш центр.</p>
+
+<p>У нас постійно розширюється перелік послуг по лікувальних маніпуляціях і додаткових процедур. Наприклад, ветеринарна клініка на Троєщині, і Позняках мають готель для тварин і салон краси.</p>
+
+<p>Ми гарантуємо комфорт та затишок кожному гостю, який потрапив до нас на пересмикування. Варто зазначити, що тварини мають окремі апартаменти, а кішки розміщуються в окремому від собак приміщенні. Краща ветеринарна клініка забезпечує максимальну турботу.</p>
+
+<p>Попередній запис здійснюється на сайті ветклініки. Ветеринарна клініка на Троєщині, Позняках "Друг" працює 24 години на добу і завжди готова прийти на допомогу вам і вашому улюбленцю.</p>
 @endsection

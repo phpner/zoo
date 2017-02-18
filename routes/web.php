@@ -31,7 +31,19 @@ Route::group(['prefix' => 'admin'], function () {
 Route::get('/uslugi',['uses'=> 'UslugiController@index', 'as'=> 'uslugi']);
 //Корма
 Route::get('/korma',['uses' => 'KormaController@index', 'as' => 'korma']);
+
 Route::get('/find',['uses' => 'FindController@index', 'as' => 'find']);
+
+Route::get('/call',['as' => 'callDoctor',function(){
+    return view('layouts/call');
+}]);
+
+Route::get('/sidebar',['middleware' => 'urlc','as' => 'sidebar',function(){
+
+    $all = \App\Model\Korm::select('img_link','title')->take(5)->get();
+
+     return view('layouts/sidebar',['slider'=> $all]);
+}]);
 
 
 

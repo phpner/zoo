@@ -220,10 +220,11 @@ footer{
      transition: opacity 1.15s linear !important
     }
   }
-  .logo_uslugi{
+  .logo_uslugi, .logo_find, .logo_call{
     border-bottom: 2px dotted #95942b;
     margin: 15px 0 15px 0;
-    padding-bottom: 15px;
+    padding-bottom: 50px;
+    text-align: center;
    
   }
   .tabUslugi{
@@ -248,13 +249,12 @@ footer{
       padding: 10px;
       border: 2px solid #dbdbdb;
       .img_popup img{
-        min-width: 100%;
+        min-width: 48%;
+        float: right;
         height: 165px;
       }
       @include border-radius(5px);
-      h3{
-        text-align: center;
-      }
+     
       &:hover{
          @include box-shadow(0px 0px 14px 0px #2774ce);
          z-index: 10;
@@ -262,7 +262,48 @@ footer{
       }
 }
 .find{
+  #map{
+    width: 100%;
+  }
+}
+.wrapper{
+  border-right: 2px dotted #95942b;
+  min-height: 650px;
+}
+.sidebar{
   img{
     width: 100%;
+  }
+}
+.sliderOfsidebar{
+  .slick-slide{
+      border:none;
+  }
+  height: 150px;
+  margin-bottom: 20px;
+  a{
+  height: 150px; 
+  img{
+    height: 150px;
+    border: 3px solid #828282;
+    @include border-radius(15px);
+  }
+}
+}
+.call_a_doctor{
+  margin-bottom: 60px;
+  .cal_a_doctor_img{
+    float: right;
+    width: 30%;
+    height: 350px;
+    overflow: hidden;
+    border: 2px solid #95942b;
+    @include border-radius(16px);      
+    img{
+      width: 100%;
+    }
+  }
+  .textIn{
+    
   }
 }

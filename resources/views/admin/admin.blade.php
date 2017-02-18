@@ -18,6 +18,7 @@
     <!-- Scripts -->
     <script src="/js/jquery.min.js" ></script>
     <script src="/js/app.js" ></script>
+    <script src="/js/slick.min.js"></script>
     <script src="/js/jquery.validate.min.js" ></script>
     <script src="/vendor/jasekz/laradrop/js/enyo.dropzone.js" ></script>
     <script src="/vendor/jasekz/laradrop/js/laradrop.js" ></script>

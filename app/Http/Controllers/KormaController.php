@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\model\Korm;
+use App\Model\Korm;
 use Illuminate\Http\Request;
 
 class KormaController extends Controller

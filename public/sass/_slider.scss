@@ -258,9 +258,6 @@ $slick-opacity-not-active: 0.25 !default;
     float: left;
     height: 100%;
     min-height: 1px;
-    margin-top: 20px;
-    @include border-radius(20px);
-    border: 3px solid #95942b;
     outline: none;
 
     [dir="rtl"] & {

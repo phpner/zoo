@@ -20,7 +20,18 @@ $(window).ready(function ($) {
         slidesToShow: 1,
         arrows:false,
         autoplay: true,
+        autoplaySpeed: 1500,
         infinite:true
     });
 
+    $('.sliderOfsidebar').slick({
+        dots: true,
+        slidesToShow: 1,
+        arrows:false,
+        autoplay: true,
+        infinite:true,
+        autoplaySpeed: 500,
+        speed:1500,
+        dots:false
+    });
 })

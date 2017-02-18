@@ -31,17 +31,16 @@
 <div id="app">
     @include('layouts.header')
     @yield('slider')
-      {{--sidebar--}}
+    {{--sidebar--}}
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-9 col-xs-9">
+            <div class="col-md-9 col-xs-9 wrapper">
                 @yield('content')
             </div>
-            <div class="col-md-3 col-xs-3">
-                <div class="col-md-12">
-                @yield('sidebar_bottom')
-                   @include('layouts.sidebar')
-                </div>
+            <div class="col-md-3 col-xs-3 sidebar">
+                    @yield('sidebar_bottom')
+                    @include('layouts.sidebar')
+
             </div>
         </div>
     </div>
